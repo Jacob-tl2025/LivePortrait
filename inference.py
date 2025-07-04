@@ -59,7 +59,11 @@ def main():
     )
 
     # run
-    live_portrait_pipeline.execute(args)
+    #live_portrait_pipeline.execute(args)
+    import cv2
+    source = cv2.imread(r"C:\Users\jacob.fiset\Pictures\Camera Roll\WIN_20250630_10_37_32_Pro.jpg")
+    driving = cv2.imread(r"C:\Users\jacob.fiset\Pictures\Camera Roll\The-average-male-face-image-magnified-by-a-factor-of-3-a-Low-resolution-image-b-the.jpg")
+    live_portrait_pipeline.execute_single_frame(source, driving, args)
 
 
 if __name__ == "__main__":
